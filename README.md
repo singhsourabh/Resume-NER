@@ -64,12 +64,6 @@ Output:
       "text": "3"
     },
     {
-      "entity": "Designation",
-      "start": 582,
-      "end": 590,
-      "text": "Software"
-    },
-    {
       "entity": "College Name",
       "start": 937,
       "end": 943,
@@ -89,42 +83,6 @@ Output:
     },
     {
       "entity": "Skills",
-      "start": 1040,
-      "end": 1050,
-      "text": "Algorithms"
-    },
-    {
-      "entity": "Skills",
-      "start": 1054,
-      "end": 1069,
-      "text": "Data Structures"
-    },
-    {
-      "entity": "Skills",
-      "start": 1074,
-      "end": 1088,
-      "text": "SQL based DBMS"
-    },
-    {
-      "entity": "Skills",
-      "start": 1094,
-      "end": 1109,
-      "text": "Turing Machines"
-    },
-    {
-      "entity": "Skills",
-      "start": 1114,
-      "end": 1125,
-      "text": "OS Concepts"
-    },
-    {
-      "entity": "Skills",
-      "start": 1168,
-      "end": 1185,
-      "text": "C/C++ Programming"
-    },
-    {
-      "entity": "Skills",
       "start": 1188,
       "end": 1219,
       "text": "○ Designing (UI/UX & Photoshop)"
@@ -134,12 +92,6 @@ Output:
       "start": 1221,
       "end": 1251,
       "text": "○ Web Development (HTML & CSS)"
-    },
-    {
-      "entity": "Skills",
-      "start": 1266,
-      "end": 1272,
-      "text": "SKILLS"
     },
     {
       "entity": "Skills",
@@ -155,21 +107,9 @@ Output:
     },
     {
       "entity": "Skills",
-      "start": 1363,
-      "end": 1371,
-      "text": "Backend:"
-    },
-    {
-      "entity": "Skills",
       "start": 1373,
       "end": 1378,
       "text": "Flask"
-    },
-    {
-      "entity": "Skills",
-      "start": 1381,
-      "end": 1400,
-      "text": "Data Visualization:"
     },
     {
       "entity": "Skills",
@@ -179,21 +119,9 @@ Output:
     },
     {
       "entity": "Skills",
-      "start": 1419,
-      "end": 1431,
-      "text": "Cloud Suite:"
-    },
-    {
-      "entity": "Skills",
       "start": 1433,
       "end": 1454,
       "text": "Google Cloud Platform"
-    },
-    {
-      "entity": "Skills",
-      "start": 1457,
-      "end": 1479,
-      "text": "Programming Languages:"
     },
     {
       "entity": "Skills",
@@ -212,19 +140,11 @@ Output:
       "start": 1511,
       "end": 1521,
       "text": "Oracle SQL"
-    },
-    {
-      "entity": "Skills",
-      "start": 1524,
-      "end": 1557,
-      "text": "Data Structures and Algorithms in"
-    },
-    {
-      "entity": "Skills",
-      "start": 1560,
-      "end": 1563,
-      "text": "C++"
     }
   ]
 }
 ```
+Links:&nbsp;&nbsp;
+[Actual Resume](demo/Resume%20-%20Ayush%20Srivastava.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[Full Response](demo/response.json)
