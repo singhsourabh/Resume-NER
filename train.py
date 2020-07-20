@@ -1,3 +1,4 @@
+import argparse
 import numpy as np
 import torch
 from transformers import BertForTokenClassification, BertTokenizerFast
@@ -6,11 +7,19 @@ from torch.optim import Adam
 from utils import trim_entity_spans, convert_goldparse, ResumeDataset, tag2idx, idx2tag, get_hyperparameters, train_and_val_model
 
 
+parser = argparse.ArgumentParser(description='Train Bert-NER')
+parser.add_argument('-e', type=int, default=5, help='number of epochs')
+parser.add_argument('-o', type=str, default='.',
+                    help='output path to save model state')
+args = parser.parse_args().__dict__
+
+output_path = args['o']
+
 MAX_LEN = 500
-EPOCHS = 1
+EPOCHS = args['e']
 MAX_GRAD_NORM = 1.0
-MODEL_PATH = 'bert-base-uncased/'
-TOKENIZER = BertTokenizerFast('bert-base-uncased/vocab.txt', lowercase=True)
+MODEL_PATH = 'bert-base-uncased'
+TOKENIZER = BertTokenizerFast('bert-base-uncased', lowercase=True)
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 data = trim_entity_spans(convert_goldparse('data/Resumes.json'))
@@ -49,5 +58,5 @@ torch.save(
     {
         "model_state_dict": model.state_dict()
     },
-    'model_e6.tar',
+    f'{output_path}/model__bert_ner.bin',
 )
