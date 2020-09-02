@@ -148,3 +148,6 @@ Links:&nbsp;&nbsp;
 [Actual Resume](demo/Resume%20-%20Ayush%20Srivastava.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [Full Response](demo/response.json)
+
+# Links
+[Dataset](https://www.kaggle.com/dataturks/resume-entities-for-ner)
