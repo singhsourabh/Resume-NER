@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request
 from utils import preprocess_data, predict, idx2tag
 
 parser = argparse.ArgumentParser(description='Train Bert-NER')
-parser.add_argument('-p', type=str, help='path of trained model state dict')
+parser.add_argument('p', type=str, help='path of trained model state dict')
 args = parser.parse_args().__dict__
 
 
@@ -21,7 +21,7 @@ STATE_DICT = torch.load(args['p'], map_location=DEVICE)
 TOKENIZER = BertTokenizerFast(f"{MODEL_PATH}/vocab.txt", lowercase=True)
 
 model = BertForTokenClassification.from_pretrained(
-    MODEL_PATH, state_dict=STATE_DICT['model_state_dict'], num_labels=NUM_LABELS)
+    'bert-base-uncased', state_dict=STATE_DICT['model_state_dict'], num_labels=NUM_LABELS)
 model.to(DEVICE)
 
 
