@@ -25,7 +25,7 @@ optional arguments:
 # Flask REST API
 
 ```bash
-python3 server/app.py -p path-for-model-weights
+python3 app.py
 ```
 API will be live at localhost:5000 endpoint predict.
 
