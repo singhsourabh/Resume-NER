@@ -3,12 +3,7 @@ import argparse
 import torch
 from transformers import BertTokenizerFast, BertForTokenClassification
 from flask import Flask, jsonify, request
-from utils import preprocess_data, predict, idx2tag
-
-parser = argparse.ArgumentParser(description='Train Bert-NER')
-parser.add_argument('p', type=str, help='path of trained model state dict')
-args = parser.parse_args().__dict__
-
+from server.utils import preprocess_data, predict, idx2tag
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
@@ -17,8 +12,8 @@ MAX_LEN = 500
 NUM_LABELS = 12
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MODEL_PATH = 'bert-base-uncased'
-STATE_DICT = torch.load(args['p'], map_location=DEVICE)
-TOKENIZER = BertTokenizerFast(f"{MODEL_PATH}/vocab.txt", lowercase=True)
+STATE_DICT = torch.load("model-state.bin", map_location=DEVICE)
+TOKENIZER = BertTokenizerFast("./vocab/vocab.txt", lowercase=True)
 
 model = BertForTokenClassification.from_pretrained(
     'bert-base-uncased', state_dict=STATE_DICT['model_state_dict'], num_labels=NUM_LABELS)

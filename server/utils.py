@@ -47,6 +47,11 @@ def predict(model, tokenizer, idx2tag, device, test_resume, max_len):
         0), data['attention_mask'].unsqueeze(0)
     labels = torch.tensor([1] * input_ids.size(0),
                           dtype=torch.long).unsqueeze(0)
+
+    input_ids = input_ids.to(device)
+    input_mask = input_mask.to(device)
+    labels = labels.to(device)
+
     with torch.no_grad():
         outputs = model(
             input_ids,
