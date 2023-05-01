@@ -1,4 +1,4 @@
-Flask==1.1.2
+Flask==2.3.2
 numpy==1.18.4
 pdfminer.six==20200517
 seqeval==0.0.12
